@@ -1,0 +1,27 @@
+# node image：打包
+FROM node:alpine as builder
+
+COPY package*.json /app/
+
+WORKDIR /app
+
+RUN npm install
+RUN npm i vite -g
+
+
+FROM builder as bundle
+
+COPY . /app
+WORKDIR /app
+
+RUN npm run build
+
+# nginx image：server
+FROM nginx:alpine as frontend-nginx
+
+COPY docker/nginx/nginx.conf /etc/nginx/conf.d/default.conf
+COPY docker/nginx/ssl /etc/nginx/ssl/
+
+COPY --from=bundle /app/dist /app/dist
+
+CMD ["nginx", "-g", "daemon off;"]

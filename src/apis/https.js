@@ -53,7 +53,7 @@ var instance = axios.create({
 	headers: {
 		Accept: "application/json",
 		"Content-Type": "application/json",
-		"Access-Control-Allow-Origin": "fido2.isac.tw",
+		"Access-Control-Allow-Origin": "carlos-webauthn-example.tk",
 		"Access-Control-Allow-Methods": "POST, GET, PUT, OPTIONS, DELETE",
 		"Access-Control-Allow-Headers":
 			"Origin, X-Requested-With, Content-Type, Accept",

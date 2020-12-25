@@ -1,0 +1,25 @@
+version: "3.8"
+
+services:
+    proxy:
+        container_name: proxy-server
+        image: proxy-server
+        build:
+            context: ./
+            dockerfile: Dockerfile.multi
+        volumes:
+            - .:/usr/share/nginx/html/
+        networks:
+            - frontend
+            - backend
+        ports:
+            - 80:80
+            - 443:443
+
+networks:
+    frontend:
+        external:
+            name: frontend_webauthn
+    backend:
+        external:
+            name: laradock_backend
