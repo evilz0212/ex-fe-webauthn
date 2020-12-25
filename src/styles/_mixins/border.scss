@@ -1,0 +1,16 @@
+@mixin linear-border() {
+	border: 2px solid color(basic-white);
+	border-image-slice: 1;
+	border-image-source: l-color(linear-bd-white);
+}
+@mixin bd-rs($type: def) {
+	@if ($type == "def") {
+		border-radius: 10px;
+	} @else if($type == "card") {
+		border-radius: 40px;
+	} @else if($type == "card-m") {
+		border-radius: 20px;
+	} @else if($type == "circle") {
+		border-radius: 100%;
+	}
+}

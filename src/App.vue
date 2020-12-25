@@ -1,15 +1,26 @@
-<template>
-  <img alt="Vue logo" src="./assets/logo.png" />
-  <HelloWorld msg="Hello Vue 3.0 + Vite" />
+<template lang="pug">
+section.card
+	router-link(to="/")
+		img.logo(alt="Webauthn", src="/@/assets/Fingerprints.svg")
+	router-view
 </template>
 
-<script>
-import HelloWorld from './components/HelloWorld.vue'
+<script setup>
+import { provide } from "vue";
+import { useStore } from "/@/store";
+import { services } from "/@/services";
+export const name = "App";
 
-export default {
-  name: 'App',
-  components: {
-    HelloWorld
-  }
-}
+provide("store", useStore());
+provide("services", services);
 </script>
+
+<style lang="scss">
+.logo {
+	@include linear-bg(card);
+	@include linear-border();
+	@include bd-rs(circle);
+	padding: 18px;
+	margin-bottom: 30px;
+}
+</style>

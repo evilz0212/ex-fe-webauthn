@@ -1,0 +1,14 @@
+// 取得色票 HEX
+@function color($color, $opacity: 1) {
+	$colorHEX: map-get($colors, $color);
+	$opc: alpha($colorHEX) * $opacity;
+
+	@return rgba($colorHEX, $opc);
+}
+@function l-color($color) {
+	@return map-get($colors, $color);
+}
+
+@function font-size($size) {
+	@return map-get($font-size, $size);
+}

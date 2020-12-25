@@ -1,0 +1,4 @@
+@mixin font($size, $weight: 500) {
+	font-size: font-size(sortWord($size));
+	font-weight: $weight;
+}

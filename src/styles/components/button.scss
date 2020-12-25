@@ -1,0 +1,27 @@
+button {
+	padding: 6px 26px;
+	width: 100px;
+	@include flex();
+
+	@include linear-bg(btn);
+	@include linear-border();
+	@include bd-rs;
+
+	color: color(basic-blue);
+	@include font(t3, 400);
+
+	&:hover {
+		cursor: pointer;
+	}
+}
+
+.btn-group {
+	margin-top: 60px;
+	@include flex();
+	button {
+		margin-right: 65px;
+	}
+	:last-child {
+		margin-right: 0;
+	}
+}

@@ -1,0 +1,81 @@
+// Fix Style
+html {
+	// 取消邊界重疊
+	box-sizing: border-box;
+}
+
+*,
+*:before,
+*:after {
+	// 繼承取消邊界重疊
+	box-sizing: inherit;
+}
+
+body {
+	// 字體顯示優化
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+}
+
+#app {
+	// 適應視窗大小
+	min-height: 100vh;
+	min-width: 100vw;
+	max-width: 100vw;
+}
+
+// =================
+// Basic Style
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;700&display=swap");
+
+body {
+	// background-color: color(basic-black);
+	// color: color(basic-white);
+
+	font-family: "Noto Sans TC", serif;
+	@include linear-bg;
+	background-color: #dadada;
+}
+#app {
+	@include flex();
+}
+
+%clip {
+	background-clip: text;
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
+	-moz-background-clip: text;
+	-moz-text-fill-color: transparent;
+}
+h1 {
+	@include font(t1, 700);
+	background-image: l-color(linear-title);
+	line-height: 1.4;
+	@extend %clip;
+
+	margin: 0 0 60px 0;
+}
+h2 {
+	@include font(t2, 700);
+	background-image: l-color(linear-title);
+	line-height: 1.4;
+	@extend %clip;
+
+	margin: 0 0 30px 0;
+}
+h3 {
+	@include font(t3, 500);
+	color: color(basic-red);
+
+	margin: 0 0 30px 0;
+}
+p {
+	@include font(t3, 400);
+	color: color(basic-black);
+
+	margin: 0;
+}
+
+a {
+	text-decoration: none;
+}

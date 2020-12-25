@@ -1,0 +1,17 @@
+.keySection {
+	width: 580px;
+	@include flex(sb);
+	@include linear-bg(card);
+	@include linear-border();
+
+	padding: 30px;
+	@include bd-rs(card-m);
+
+	img {
+		flex: 0;
+	}
+	p {
+		flex: 1;
+		margin-left: 15px;
+	}
+}

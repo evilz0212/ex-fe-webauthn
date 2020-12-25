@@ -1,0 +1,68 @@
+// 定義數值群組、識別
+$colors: (
+	"basic-black": #1e1f24,
+	"basic-white": #efefef,
+	"basic-red": #aa070799,
+	"basic-blue": #3970ae,
+	// linear
+	"linear-title":
+		linear-gradient(
+			96.75deg,
+			#00517e -7.29%,
+			rgba(61, 163, 221, 0.42) 125.03%
+		),
+	"linear-icon":
+		linear-gradient(
+			151.5deg,
+			#0056a5 -2.48%,
+			rgba(255, 255, 255, 0.8) 128.03%
+		),
+	"linear-card-bgc":
+		linear-gradient(
+			0deg,
+			rgba(255, 255, 255, 0.35),
+			rgba(255, 255, 255, 0.35)
+		),
+	"linear-card":
+		linear-gradient(
+			109.55deg,
+			rgba(255, 255, 255, 0.125) -2.36%,
+			rgba(255, 255, 255, 0) 102.46%
+		),
+	"linear-btn-bgc":
+		linear-gradient(
+			0deg,
+			rgba(255, 255, 255, 0.7),
+			rgba(255, 255, 255, 0.7)
+		),
+	"linear-btn":
+		linear-gradient(
+			109.55deg,
+			rgba(255, 255, 255, 0.5) -2.36%,
+			rgba(255, 255, 255, 0) 102.46%
+		),
+	"linear-input-bgc":
+		linear-gradient(
+			0deg,
+			rgba(255, 255, 255, 0.5),
+			rgba(255, 255, 255, 0.5)
+		),
+	"linear-input":
+		linear-gradient(
+			109.55deg,
+			rgba(255, 255, 255, 0.325) -2.36%,
+			rgba(255, 255, 255, 0) 102.46%
+		),
+	"linear-border":
+		linear-gradient(
+			109.74deg,
+			rgba(255, 255, 255, 0.56) -1.5%,
+			rgba(255, 255, 255, 0.16) 104.11%
+		),
+);
+$font-size: (
+	"t1": 36px,
+	"t2": 30px,
+	"t3": 18px,
+	"st": 12px,
+);

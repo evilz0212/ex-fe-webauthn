@@ -1,0 +1,12 @@
+section {
+	@include flex(c, c, col);
+
+	&.card {
+		@include linear-bg(card);
+		@include linear-border();
+
+		min-width: 840px;
+		padding: 60px;
+		@include bd-rs(card);
+	}
+}

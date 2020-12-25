@@ -1,0 +1,32 @@
+input {
+	min-width: 320px;
+	max-width: 320px;
+	height: 40px;
+	padding: 12px 20px;
+	margin-bottom: 25px;
+
+	@include linear-bg(input);
+	@include linear-border();
+	@include shadow();
+
+	@include bd-rs;
+	@include font(st, 400);
+
+	&:focus {
+		outline: none;
+	}
+
+	&[placeholder],
+	&[type="password"] {
+		color: color(basic-black, 0.8);
+	}
+	&::placeholder {
+		color: color(basic-black, 0.2);
+	}
+}
+label:last-of-type input {
+	margin-bottom: 0;
+}
+form {
+	@include flex(c, c, col);
+}
