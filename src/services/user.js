@@ -25,11 +25,11 @@ export const register = async (data) => {
 			console.log(error)
 			switch (error.response.status) {
 				case 406:
-					return "Registration failed, please try again"
+					return "Registration failed, please try again."
 				case 500:
 					return "This email has already been registered, please try again."
 				default:
-					return "Registration failed, please try again"
+					return "Registration failed, please try again."
 			}
 		})
 }
@@ -65,13 +65,13 @@ export const webauthnRegister = async (data) => {
 				})
 				.then((res) => {
 					console.log(res.data)
-					return "Registration success"
+					return "Registration success."
 				})
 				.catch((error) => {
 					console.log(error)
 					switch (error.response.status) {
 						default:
-							return "Registration failed"
+							return "Registration failed."
 					}
 				})
 		}
