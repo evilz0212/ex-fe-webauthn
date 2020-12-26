@@ -25,11 +25,11 @@ export const register = async (data) => {
 			console.log(error)
 			switch (error.response.status) {
 				case 406:
-					return "註冊失敗，請重新輸入"
+					return "Registration failed, please try again"
 				case 500:
-					return "此Email已被註冊，請重新輸入"
+					return "This email has already been registered, please try again."
 				default:
-					return "註冊失敗"
+					return "Registration failed, please try again"
 			}
 		})
 }
@@ -38,12 +38,12 @@ export const webauthnDestroy = async (data) => {
 	return await api.user
 		.deleteWebauthnKey(data)
 		.then((res) => {
-			return "已刪除金鑰"
+			return "Security key deleted."
 		})
 		.catch((error) => {
 			switch (error.response.status) {
 				default:
-					return "刪除失敗"
+					return "Failed to delete."
 			}
 		})
 }
@@ -65,13 +65,13 @@ export const webauthnRegister = async (data) => {
 				})
 				.then((res) => {
 					console.log(res.data)
-					return "註冊成功"
+					return "Registration success"
 				})
 				.catch((error) => {
 					console.log(error)
 					switch (error.response.status) {
 						default:
-							return "註冊失敗"
+							return "Registration failed"
 					}
 				})
 		}
@@ -110,9 +110,9 @@ export const login = async ({ email, password }) => {
 			console.log(error.response.status)
 			switch (error.response.status) {
 				case 406:
-					return "帳號密碼錯誤，請重新輸入"
+					return "The account or password is incorrect, please try again."
 				default:
-					return "登入失敗"
+					return "Login failed, please try again."
 			}
 		})
 }
