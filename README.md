@@ -44,7 +44,7 @@
    - api 管理
 
 ### Detail
--  雲端主機：
+-  雲端主機：
    -  Server：GCP, Cloud DNS, VM(ubuntu 18.04)
    -  Domain：freenom
    -  SSL：sslforfree
